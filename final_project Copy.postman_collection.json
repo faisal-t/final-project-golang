@@ -1,0 +1,954 @@
+{
+	"info": {
+		"_postman_id": "05713e61-2b4c-4c93-9709-c41fba7f8fea",
+		"name": "final_project Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"akun testingg\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/user/register",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "detailUser",
+			"item": [
+				{
+					"name": "EditDetailUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\":\"Mochammad Faizal Mahromi\",\r\n    \"alamat\":\"jl pagilingan\",\r\n    \"phone\":\"0812445673923\",\r\n    \"avatar\":\"https://ecs7.tokopedia.net/img/cache/300/default_picture_user/default_toped-16.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/detailuser/update/:user_id",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"detailuser",
+								"update",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDetailUser",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/detailuser/:user_id",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"detailuser",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "19"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "toko",
+			"item": [
+				{
+					"name": "tambah_toko",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"toko bagus\",\r\n    \"alamat\":\"jalan timur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/toko/store/:userid",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"toko",
+								"store",
+								":userid"
+							],
+							"variable": [
+								{
+									"key": "userid",
+									"value": "19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_toko",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"tokoo pedia\",\r\n    \"alamat\":\"sukaraja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/toko/update/:id",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"toko",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "kategori",
+			"item": [
+				{
+					"name": "addKategori",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Laptop\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/kategori/store",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"kategori",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateKategori",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"laptop\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/kategori/update/:id",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"kategori",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "iklan",
+			"item": [
+				{
+					"name": "GetAllIklan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/iklan",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"iklan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addIklan",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"thumbnail\":\"https://images.tokopedia.net/img/cache/1200/NXCtjv/2021/9/24/7b13c3e2-89eb-471a-93c0-91f6955ee0f1.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/iklan/store",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"iklan",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateIklan",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"thumbnail\":\"https://images.tokopedia.net/img/cache/1200/NXCtjv/2021/9/22/9f12eb8f-41d9-4618-83eb-f47cd636617f.png.webp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/iklan/update/:id",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"iklan",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteIklan",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/iklan/delete/:id",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"iklan",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "produk",
+			"item": [
+				{
+					"name": "GetAllProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/produk",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduct",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kategori_id\":1,\r\n    \"name\":\"Laptop Acer Predator\",\r\n    \"description\":\"lorem ipsum dolor sit amet\",\r\n    \"harga\":2000000,\r\n    \"image_url\":\"img\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/produk/store/:id_toko",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produk",
+								"store",
+								":id_toko"
+							],
+							"variable": [
+								{
+									"key": "id_toko",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kategori_id\":1,\r\n    \"name\":\"asus Gor\",\r\n    \"description\":\"lorem ipsum dolor sit amet\",\r\n    \"harga\":2000000,\r\n    \"image_url\":\"img\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/produk/update/:id_product",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produk",
+								"update",
+								":id_product"
+							],
+							"variable": [
+								{
+									"key": "id_product",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/produk/delete/:id_product",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"produk",
+								"delete",
+								":id_product"
+							],
+							"variable": [
+								{
+									"key": "id_product",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "getAllKeranjang",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/order/dikeranjang/:user_id",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"order",
+								"dikeranjang",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllTransaksi",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/order/transaksi/:user_id",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"order",
+								"transaksi",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddToKeranjang",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\":19,\r\n    \"alamat_pengiriman\":\"sukarajaa\",\r\n    \"harga\":2000000,\r\n    \"qty\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/order/keranjang/:id_product",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"order",
+								"keranjang",
+								":id_product"
+							],
+							"variable": [
+								{
+									"key": "id_product",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RequestPembayaran",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bukti_bayar\":\"https://i0.wp.com/dicoffeean.com/wp-content/uploads/2019/07/Sukses-Kirim-ke-Bank-LinkAja.png?w=419&ssl=1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/order/bayar/:id_order",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"order",
+								"bayar",
+								":id_order"
+							],
+							"variable": [
+								{
+									"key": "id_order",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KonfirmasiBayarAdmin",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "udin123",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://final-project-golang-2021.herokuapp.com/order/konfirmasi/:id_order",
+							"protocol": "https",
+							"host": [
+								"final-project-golang-2021",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"order",
+								"konfirmasi",
+								":id_order"
+							],
+							"variable": [
+								{
+									"key": "id_order",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
