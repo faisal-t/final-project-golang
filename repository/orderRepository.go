@@ -71,7 +71,7 @@ func AddToKeranjang(ctx context.Context, order model.Order, produk_id int) error
 
 	totalBayar := order.Qty * order.Harga
 
-	queryText := fmt.Sprintf("INSERT INTO %v (user_id,product_id,status,harga,qty,total_bayar,alamat_pengiriman,created_at, updated_at) values(%v,%v,'dikeranjang',%v,%v,%v,'%v', NOW(), NOW())", tableOrder,
+	queryText := fmt.Sprintf("INSERT INTO %v (user_id,product_id,status,harga,qty,total_bayar,alamat_pengiriman,bukti_bayar,created_at, updated_at) values(%v,%v,'dikeranjang',%v,%v,%v,'%v','null', NOW(), NOW())", tableOrder,
 		order.User_Id,
 		produk_id,
 		order.Harga,
