@@ -45,9 +45,9 @@ func main() {
 	//order
 	router.GET("/order/dikeranjang/:user_id", BasicAuth(GetDikeranjang))
 	router.GET("/order/transaksi/:user_id", BasicAuth(GetSudahBayar))
-	router.POST("/order/keranjang/:id_product", BasicAuth(GetSudahBayar))
-	router.PUT("/order/bayar/:id_order", BasicAuth(GetSudahBayar))
-	router.PUT("/order/konfirmasi/:id_order", BasicAuth(GetSudahBayar))
+	router.POST("/order/keranjang/:id_product", BasicAuth(PostKeranjang))
+	router.PUT("/order/bayar/:id_order", BasicAuth(Pembayaran))
+	router.PUT("/order/konfirmasi/:id_order", BasicAuth(KonfirmasiPembayaran))
 
 	port := os.Getenv("PORT")
 	if port == "" {
